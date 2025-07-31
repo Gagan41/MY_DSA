@@ -2,11 +2,12 @@ package Array;
 
 public class LC1822 {
     public static int arraySign(int[] nums) {
-        int p = 1;
-        for(int i:nums){
-            p *= i;
+        int sign = 1;
+        for (int i : nums) {
+            if (i == 0) return 0;
+            if (i < 0) sign *= -1;
         }
-        return ((p==0) ? 0 : (p<0) ? -1 : 1);
+        return sign;
     }
 
     public static void main(String[] args) {
