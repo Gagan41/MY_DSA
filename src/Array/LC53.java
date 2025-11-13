@@ -15,6 +15,18 @@ public class LC53 {
         }
         return max;
     }
+
+    public int maxSubArray1(int[] nums) {
+        int c_sum = nums[0];
+        int max = nums[0];
+
+        for(int i=1; i<nums.length; i++){
+            c_sum = Math.max(nums[i], c_sum+nums[i]);
+            max = Math.max(c_sum,max);
+        }
+
+        return max;
+    }
 }
 
 //Given an integer array nums, find the subarray with the largest sum, and return its sum.
