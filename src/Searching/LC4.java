@@ -38,4 +38,5 @@ public class LC4 {
         }
         throw new IllegalArgumentException("Input arrays are not sorted properly");
     }
+
 }
