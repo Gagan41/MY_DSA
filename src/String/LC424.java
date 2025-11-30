@@ -25,3 +25,4 @@ public class LC424 {
         return result;
     }
 }
+
