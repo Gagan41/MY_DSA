@@ -31,7 +31,6 @@ public class LC76 {
                     if(map.get(sc) > 0) count++;
                 }
             }
-
             if((j-i) < min){
                 l = i;
                 r = j;
