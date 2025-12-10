@@ -7,8 +7,8 @@ public class LC162 {
         while(l < r){
             int mid = l+(r-l)/2;
 
-            if(nums[mid] < nums[mid + 1]) l = mid + 1;
-            else r = mid;
+            if(nums[mid] < nums[mid + 1]) l = mid + 1;  // Go right
+            else r = mid; // Go left
         }
 
         return l;
