@@ -26,3 +26,4 @@ public class LC228 {
         return result;
     }
 }
+
