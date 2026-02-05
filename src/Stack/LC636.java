@@ -1,0 +1,32 @@
+package Stack;
+import java.util.*;
+
+public class LC636 {
+    public int[] exclusiveTime(int n, List<String> logs) {
+        int[] res = new int[n];
+        Stack<Integer> stack = new Stack<>();
+
+        int prev = 0;
+
+        for(String log:logs){
+            String[] parts = log.split(":");
+            int fid = Integer.parseInt(parts[0]);
+            String type = parts[1];
+            int time = Integer.parseInt(parts[2]);
+
+            if(type.equals("start")){
+                if(!stack.isEmpty()){
+                    res[stack.peek()] += time - prev;
+                }
+
+                stack.push(fid);
+                prev = time;
+            } else {
+                res[stack.pop()] += time - prev + 1;
+                prev = time + 1;
+            }
+        }
+
+        return res;
+    }
+}
