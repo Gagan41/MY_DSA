@@ -23,7 +23,6 @@ public class LC312 {
                 }
             }
         }
-
         return dp[0][n + 1];
     }
 }
