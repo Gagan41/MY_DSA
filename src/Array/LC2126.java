@@ -1,0 +1,19 @@
+package Array;
+import java.util.*;
+
+public class LC2126 {
+    public boolean asteroidsDestroyed(int mass, int[] asteroids) {
+        Arrays.sort(asteroids);
+
+        long cur = mass;
+        for(int a:asteroids){
+            if(cur < a){
+                return false;
+            }
+
+            cur += a;
+        }
+
+        return true;
+    }
+}
