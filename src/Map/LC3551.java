@@ -48,6 +48,7 @@ public class LC3551 {
         return swaps;
     }
 
+    //the usual sum of digits
     private int dsum(int n){
         int sum = 0;
 
